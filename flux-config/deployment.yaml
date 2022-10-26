@@ -21,6 +21,9 @@ spec:
       - image: bibhas2/gitops-demo-webapp
         name: gitops-demo
         resources: {}
+        envFROM:
+          - secretRef:
+              name: mysqlcreds
 ---
 
 apiVersion: v1
